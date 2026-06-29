@@ -1,0 +1,170 @@
+@use "mixins/breakpoint";
+@use "mixins/mini";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family, sans-serif);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: normal;
+  background-color: var(--primary-primary-2);
+  color: var(--base-black);
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.main {
+  position: relative;
+
+  @include mini.footerToBottom;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+  width: 100%;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@include breakpoint.tablet {
+  .main {
+    overflow-x: hidden;
+  }
+  .section {
+    overflow-x: hidden;
+  }
+}
+
+::-webkit-scrollbar {width: 4px;height: 0px;}
+::-webkit-scrollbar-track-piece {background:var(--primary-light-blue);}
+::-webkit-scrollbar-thumb:vertical {
+  height:10px;background:var(--additional-colors-blue);-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:vertical:hover {background:var(--primary-blue-3-active);}
+
+.graph-modal {
+    background: rgba(11, 11, 11, 0.6);
+}
+
+.uForm__error-msg {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: red;
+}
+.uForm__extended {
+    display: none;
+}
+
+.uForm__preload {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../uForm/img/loading.gif') no-repeat;
+    background-size: 120px;
+    background-position: center;
+    margin: 0 auto;
+    background-color: var(--cs-white);
+}
+
+@include breakpoint.large-desktop {
+    :root {
+        --content-width: 1360px;
+    }
+}
+
+@include breakpoint.big-desktop {
+    :root {
+        --container-offset: 24px;
+    }
+}
+
+@include breakpoint.small-tablet {
+    :root {
+        --container-offset: 16px;
+    }
+}

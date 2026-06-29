@@ -1,0 +1,56 @@
+import { disableScroll } from '../functions/disable-scroll';
+import { enableScroll } from '../functions/enable-scroll';
+
+(function(){
+  const burger = document?.querySelector('[data-burger]');
+  const menu = document?.querySelector('[data-menu]');
+  const menuItems = document?.querySelectorAll('[data-menu-item]');
+  const overlay = document?.querySelector('[data-menu-overlay]');
+//   const navigationBackground = document.querySelector('.navigation-bg');
+  const btnMenuCloseElem = document.querySelector('.btn-menu-close');
+  const btnFixedQuickNow = document.querySelector('.btn-fixed');
+
+  burger?.addEventListener('click', (e) => {
+    burger?.classList.toggle('burger--active');
+    menu?.classList.toggle('menu--active');
+    // navigationBackground?.classList.toggle('navigation-bg__active');
+    setTimeout(() => {
+      btnFixedQuickNow?.classList.toggle('show');
+    }, 500);
+
+
+    if (menu?.classList.contains('menu--active')) {
+      burger?.setAttribute('aria-expanded', 'true');
+      burger?.setAttribute('aria-label', 'Закрыть меню');
+      disableScroll();
+    } else {
+      burger?.setAttribute('aria-expanded', 'false');
+      burger?.setAttribute('aria-label', 'Открыть меню');
+      enableScroll();
+    }
+  });
+
+  overlay?.addEventListener('click', () => {
+    burger?.setAttribute('aria-expanded', 'false');
+    burger?.setAttribute('aria-label', 'Открыть меню');
+    burger.classList.remove('burger--active');
+    menu.classList.remove('menu--active');
+    // navigationBackground.classList.remove('navigation-bg__active');
+    enableScroll();
+  });
+
+  menuItems?.forEach(el => {
+    el.addEventListener('click', () => {
+      burger?.setAttribute('aria-expanded', 'false');
+      burger?.setAttribute('aria-label', 'Открыть меню');
+      burger.classList.remove('burger--active');
+      menu.classList.remove('menu--active');
+    //   navigationBackground.classList.remove('navigation-bg__active');
+      enableScroll();
+    });
+  });
+
+  btnMenuCloseElem.addEventListener('click', () => {
+    burger.click();
+  });
+})();

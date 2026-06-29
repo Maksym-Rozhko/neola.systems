@@ -1,0 +1,34 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Geist", sans-serif;
+  --second-family: "IBM Plex Sans", sans-serif;
+  --content-width: 1840px;
+  --container-offset: 40px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --basic-black: #0b1017;
+  --basic-white: #fff;
+  --grey-1: #f5f9ff;
+  --grey-2: #e6eaf2;
+  --grey-3: #caced3;
+  --grey-4: #9da0a5;
+  --grey-5: #5f6670;
+  --grey-6: #292f37;
+  --primary-light-blue: #bad6ff;
+  --primary-blue-1-enabled: #0c4df3;
+  --primary-blue-2-hover: #043fd4;
+  --primary-blue-3-active: #0134b8;
+  --additional-colors-green: #69ffdb;
+  --additional-colors-blue: #468aff;
+  --additional-colors-light-blue: #3197d4;
+  --additional-colors-light-green-1: #dbfff6;
+  --additional-colors-light-green-2: #9affe7;
+  --additional-colors-light-blue-1: #dbe4ff;
+  --additional-colors-light-blue-2: #9fb7ff;
+  --additional-colors-red: #da1e28;
+  --grey-5: #374c6b;
+  --grey-1-500: rgba(238, 241, 246, 0.5);
+}

@@ -1,0 +1,11 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@include breakpoint.big-desktop {
+
+}
+
+
+@include breakpoint.mobile {
+
+}

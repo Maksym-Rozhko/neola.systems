@@ -1,0 +1,15 @@
+// базовые подключения
+@use "vars";
+@use "mixins";
+@use "fonts";
+@use "settings";
+// подключения компонентов страницы
+@use "./components/header";
+@use "./components/footer";
+@use "./components/home";
+@use "./mixins/burger";
+
+// подкоючение медиа
+@use "./components/media/header" as header2;
+@use "./components/media/footer" as footer2;
+@use "./components/media/home" as home2;

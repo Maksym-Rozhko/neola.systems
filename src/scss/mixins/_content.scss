@@ -1,0 +1,235 @@
+@use "mini";
+@use "breakpoint";
+@use "checkbox";
+
+@mixin btn {
+    @include mini.flex-all-sb;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 16px;
+    padding: 16px 24px;
+    max-width: fit-content;
+    border: none;
+    width: 100%;
+    min-height: 58px;
+    box-shadow: 0 4px 8px 0 transparent;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+
+    &:disabled {
+        background-color: var(--grey-4);
+        color: var(--grey-3);
+        pointer-events: none;
+
+        &:hover {
+            background-color: var(--grey-4);
+            color: var(--grey-3);
+        }
+    }
+}
+
+@mixin btn--primary {
+    color: var(--basic-white);
+
+    background-color: var(--basic-black);
+
+    &:hover {
+        box-shadow: 0 4px 8px 0 rgba(12, 77, 243, 0.5);
+        background: radial-gradient(82.14% 100% at 48.99% 100%, #0063ff 0%, #0b1017 100%);
+    }
+}
+
+@mixin btn--white {
+    color: var(--basic-white);
+    background-color: var(--basic-white);
+
+    &:hover {
+        box-shadow: 0 4px 8px 0 rgba(12, 77, 243, 0.5);
+        background: radial-gradient(82.14% 100% at 48.99% 100%, #0063ff 0%, var(--basic-white) 100%);
+    }
+}
+
+@mixin btn--large {
+    max-width: inherit;
+}
+
+@mixin form {
+    &-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    // label:not(.form-checkbox) {
+    //     display: block;
+    //     font-weight: 700;
+    //     font-size: 18px;
+    //     line-height: 144%;
+    //     letter-spacing: 0.05em;
+    //     text-transform: uppercase;
+    //     margin-bottom: 12px;
+    // }
+
+    &__input {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: var(--secondary-accent-light);
+        padding: 0 4px 4px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--secondary-secondary-1);
+        outline: none;
+        caret-color: var(--secondary-accent-light);
+        transition: all ease-in-out .6s;
+
+        &::placeholder {
+            color: var(--secondary-neutral);
+        }
+
+        &:focus {
+            border-color: var(--secondary-accent-light);
+        }
+
+        &:focus:invalid {
+            border-color: var(--cs-error);
+        }
+
+        &:disabled {
+            background-color: var(--secondary-secondary-2);
+            opacity: .5;
+        }
+    }
+
+    textarea {
+        resize: none;
+        min-height: inherit;
+    }
+
+    .custom-checkbox {
+        @include checkbox.custom-checkbox;
+    }
+
+    .btn-main {
+        position: relative;
+        overflow: hidden;
+        margin-top: 40px;
+        max-width: inherit;
+        font-size: 18px;
+    }
+}
+
+@mixin title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    color: var(--additional-colors-blue);
+
+    span {
+        color: var(--additional-colors-blue);
+    }
+}
+
+@mixin subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--additional-colors-light-blue-2);
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--base-white);
+}
+
+@mixin text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--grey-5);
+}
+
+@mixin socials {
+    @include mini.flex-v-center;
+    gap: 10px;
+
+    &__link {
+        @include mini.flex-all-center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        backdrop-filter: blur(33.181819915771484px);
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: all ease-in-out .4s;
+
+        .icon {
+            display: block;
+            width: 24px;
+            height: 24px;
+            fill: var(--base-white);
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+.section-title {
+    @include title;
+}
+
+.section-subtitle {
+    @include subtitle;
+}
+
+.section-text {
+    @include text;
+}
+
+.btn {
+    @include btn;
+
+    &--primary {
+        @include btn--primary;
+    }
+
+    &--white {
+        @include btn--white;
+    }
+}
+
+@include breakpoint.big-desktop {
+    .section-title {
+        font-size: 54px;
+    }
+}
+
+@include breakpoint.small-desktop {
+    .section-title {
+        font-size: 48px
+    }
+
+    .section-subtitle {
+        font-size: 22px
+    }
+}
+
+@include breakpoint.small-tablet {
+    .section-title {
+        font-size: 40px;
+    }
+
+    .section-subtitle {
+        font-size: 20px
+    }
+}
+
+@include breakpoint.mobile {
+
+}

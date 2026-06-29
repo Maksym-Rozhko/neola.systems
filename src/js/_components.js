@@ -1,0 +1,11 @@
+// import preloader from './components/preloader';
+import customScripts from './components/customScripts';
+// import cursor from './components/cursor';
+// import initSliders from './components/initSliders';
+import headerScrollFixed from './components/fixedHeader';
+import scrollAnimation from './components/scrollAnimation';
+// import tabs from './components/tabs';
+// import accordion from './components/accordion';
+// import scrollToTop from './components/scrollToTop';
+// import smoothScrollToElems from './components/smoothScrollToElems';
+// import modal from './components/modal';

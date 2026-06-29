@@ -1,0 +1,6 @@
+@use "mixins/font-face";
+
+@include font-face.font-face("Satoshi", "../fonts/Satoshi-Regular", 400, normal);
+@include font-face.font-face("Satoshi", "../fonts/Satoshi-Medium", 500, medium);
+@include font-face.font-face("Satoshi", "../fonts/Satoshi-Bold", 700, bold);
+@include font-face.font-face("Aesthet Nova", "../fonts/Aesthet-Nova-Medium", 500, medium);

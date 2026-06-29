@@ -1,0 +1,253 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+@use "../../mixins/content";
+
+@media (min-width: 2000px) {
+    .header {
+        .mobile-menu {
+            .nav {
+                &::before {
+                    width: 1000px;
+                    height: 1000px;
+                }
+
+                ul {
+                    a {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            .image-wrapper {
+                &--left {
+                    &::before {
+                        height: 825px;
+                    }
+
+                    .image {
+                        max-width: 600px;
+                        max-height: 1220px;
+                    }
+                }
+
+                &--right {
+                    &::before {
+                        height: 640px;
+                    }
+
+                    .image {
+                        max-width: 400px;
+                        max-height: 780px;
+                    }
+                }
+            }
+
+            &.menu--active {
+                .image-wrapper {
+                    &--left {
+                        &::before {
+                            width: 825px;
+                        }
+                    }
+                    &--right {
+                        &::before {
+                            width: 640px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 2200px) {
+    .header {
+        .mobile-menu {
+            .nav {
+                &::before {
+                    width: 1300px;
+                    height: 1300px;
+                }
+            }
+
+            .image-wrapper {
+                &--left {
+                    &::before {
+                        height: 1025px;
+                    }
+
+                    .image {
+                        max-width: inherit;
+                        max-height: inherit;
+                    }
+                }
+
+                &--right {
+                    &::before {
+                        height: 840px;
+                    }
+
+                    .image {
+                        max-width: inherit;
+                        max-height: inherit;
+                    }
+                }
+            }
+
+            &.menu--active {
+                .image-wrapper {
+                    &--left {
+                        &::before {
+                            width: 1025px;
+                        }
+                    }
+                    &--right {
+                        &::before {
+                            width: 840px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .header {
+        padding: 24px 0;
+
+        .mobile-menu {
+            &__top {
+                padding-block: 24px;
+            }
+
+            .nav {
+                &::before {
+                    width: 784px;
+                    height: 784px;
+                }
+
+                ul {
+                    a {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            &__bottom {
+                padding-block: 30px;
+            }
+
+            .image-wrapper {
+                &--left {
+                    left: 52px;
+
+                    &::before {
+                        height: 525px;
+                    }
+
+                    .image {
+                        max-width: 350px;
+                    }
+                }
+
+                &--right {
+                    right: 80px;
+
+                    &::before {
+                        height: 440px;
+                    }
+
+                    .image {
+                        max-width: 235px;
+                    }
+                }
+            }
+
+            &.menu--active {
+                .image-wrapper {
+                    &--left {
+                        &::before {
+                            width: 525px;
+                        }
+                    }
+                    &--right {
+                        &::before {
+                            width: 440px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .header {
+        padding: 22px 0;
+
+        .mobile-menu {
+            &__top {
+                padding-block: 22px;
+            }
+            .nav {
+                &::before {
+                    width: 684px;
+                    height: 684px;
+                }
+
+                ul {
+                    a {
+                        font-size: 28px;
+                    }
+                }
+            }
+
+            .image-wrapper {
+                display: none;
+            }
+            &__bottom {
+                padding-block: 24px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .header {
+        padding: 16px 0;
+
+        .logo-link {
+            .logo {
+                max-width: 80px;
+                min-width: 80px;
+                max-height: 25px;
+                filter: invert(1);
+            }
+        }
+
+        .mobile-menu {
+            &__top {
+                padding-block: 16px;
+            }
+            .nav {
+                &::before {
+                    content: none;
+                }
+
+                ul {
+                    a {
+                        font-size: 24px;
+                    }
+                }
+            }
+            &__bottom {
+                padding-block: 16px;
+            }
+        }
+    }
+
+    .header.active-scroll {
+        padding: 14px 0;
+    }
+}
