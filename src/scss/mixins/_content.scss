@@ -19,13 +19,27 @@
     transition: all ease-in-out .4s;
 
     &:disabled {
-        background-color: var(--grey-4);
+        background: var(--grey-4);
         color: var(--grey-3);
         pointer-events: none;
 
+        img {
+            filter: brightness(1) grayscale(1) invert(1);
+        }
+
         &:hover {
-            background-color: var(--grey-4);
+            background: var(--grey-4);
             color: var(--grey-3);
+        }
+    }
+
+    img {
+        transition: all ease-in-out .4s;
+    }
+
+    &:hover {
+        img {
+            transform: translateX(5px);
         }
     }
 }
@@ -33,7 +47,7 @@
 @mixin btn--primary {
     color: var(--basic-white);
 
-    background-color: var(--basic-black);
+    background: radial-gradient(82.14% 100% at 48.99% 100%, var(--basic-black) 0%, #0b1017 100%);
 
     &:hover {
         box-shadow: 0 4px 8px 0 rgba(12, 77, 243, 0.5);
@@ -42,8 +56,8 @@
 }
 
 @mixin btn--white {
-    color: var(--basic-white);
-    background-color: var(--basic-white);
+    color: var(--basic-black);
+    background: radial-gradient(82.14% 100% at 48.99% 100%, var(--basic-white) 0%, var(--basic-white) 100%);
 
     &:hover {
         box-shadow: 0 4px 8px 0 rgba(12, 77, 243, 0.5);
@@ -51,46 +65,63 @@
     }
 }
 
+@mixin btn--cta {
+    min-height: 50px;
+    padding: 8px 8px 8px 12px;
+    font-size: 15px;
+    color: var(--basic-white);
+    background-color: #1c6fff;
+
+    &:hover {
+        box-shadow: 0 4px 8px 0 rgba(12, 77, 243, 0.5);
+    }
+}
+
 @mixin btn--large {
     max-width: inherit;
+
+    &:hover {
+            background: radial-gradient(82.14% 100% at 48.99% 100%, #0063ff 0%, var(--basic-black) 70%);
+    }
 }
 
 @mixin form {
     &-group {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 8px;
         width: 100%;
         margin-bottom: 20px;
+
+        span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+            color: var(--additional-colors-blue);
+            opacity: 0;
+            transition: all ease-in-out .6s;
+        }
     }
-
-    // label:not(.form-checkbox) {
-    //     display: block;
-    //     font-weight: 700;
-    //     font-size: 18px;
-    //     line-height: 144%;
-    //     letter-spacing: 0.05em;
-    //     text-transform: uppercase;
-    //     margin-bottom: 12px;
-    // }
-
     &__input {
         font-weight: 500;
-        font-size: 16px;
-        line-height: 140%;
-        color: var(--secondary-accent-light);
-        padding: 0 4px 4px;
+        font-size: 32px;
+        line-height: 120%;
+        padding: 8px 8px 16px;
         width: 100%;
         background-color: transparent;
         border: none;
-        border-bottom: 1px solid var(--secondary-secondary-1);
+        border-bottom: 1px solid var(--basic-black);
         outline: none;
-        caret-color: var(--secondary-accent-light);
+        caret-color: var(--basic-black);
         transition: all ease-in-out .6s;
 
         &::placeholder {
-            color: var(--secondary-neutral);
+            color: var(--grey-3);
         }
 
-        &:focus {
-            border-color: var(--secondary-accent-light);
+        &:focus + span,
+        &:not(:placeholder-shown) + span {
+            opacity: 1;
         }
 
         &:focus:invalid {
@@ -127,7 +158,7 @@
     font-weight: 500;
     font-size: 40px;
     line-height: 120%;
-    color: var(--additional-colors-blue);
+    color: var(--basic-black);
 
     span {
         color: var(--additional-colors-blue);
@@ -137,13 +168,14 @@
 @mixin subtitle {
     margin-top: 0;
     margin-bottom: 0;
+    max-width: fit-content;
     font-weight: 500;
     font-size: 16px;
     line-height: 175%;
     color: var(--additional-colors-light-blue-2);
     padding: 8px;
     border-radius: 10px;
-    background-color: var(--base-white);
+    background-color: var(--basic-white);
 }
 
 @mixin text {
@@ -154,31 +186,31 @@
     color: var(--grey-5);
 }
 
-@mixin socials {
-    @include mini.flex-v-center;
-    gap: 10px;
+// @mixin socials {
+//     @include mini.flex-v-center;
+//     gap: 10px;
 
-    &__link {
-        @include mini.flex-all-center;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        backdrop-filter: blur(33.181819915771484px);
-        background-color: rgba(255, 255, 255, 0.1);
-        transition: all ease-in-out .4s;
+//     &__link {
+//         @include mini.flex-all-center;
+//         width: 48px;
+//         height: 48px;
+//         border-radius: 50%;
+//         backdrop-filter: blur(33.181819915771484px);
+//         background-color: rgba(255, 255, 255, 0.1);
+//         transition: all ease-in-out .4s;
 
-        .icon {
-            display: block;
-            width: 24px;
-            height: 24px;
-            fill: var(--base-white);
-        }
+//         .icon {
+//             display: block;
+//             width: 24px;
+//             height: 24px;
+//             fill: var(--basic-white);
+//         }
 
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-    }
-}
+//         &:hover {
+//             background-color: rgba(255, 255, 255, 0.3);
+//         }
+//     }
+// }
 
 .section-title {
     @include title;
@@ -202,34 +234,12 @@
     &--white {
         @include btn--white;
     }
-}
 
-@include breakpoint.big-desktop {
-    .section-title {
-        font-size: 54px;
-    }
-}
-
-@include breakpoint.small-desktop {
-    .section-title {
-        font-size: 48px
+    &--cta {
+        @include btn--cta;
     }
 
-    .section-subtitle {
-        font-size: 22px
+    &--large {
+        @include btn--large;
     }
-}
-
-@include breakpoint.small-tablet {
-    .section-title {
-        font-size: 40px;
-    }
-
-    .section-subtitle {
-        font-size: 20px
-    }
-}
-
-@include breakpoint.mobile {
-
 }

@@ -2,10 +2,522 @@
 @use "../../mixins/mini";
 
 @include breakpoint.big-desktop {
+    .work {
+        &__container {
+            gap: 44px;
+        }
 
+        .steps {
+            padding-left: 200px;
+        }
+
+        .step {
+            &::before {
+                left: -98px;
+            }
+
+            &::after {
+                left: -185px;
+            }
+
+            h3 {
+                &::before {
+                    left: -107px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .why {
+        .item {
+            &__image {
+                max-width: 350px;
+            }
+
+            &.active {
+                min-width: 384px;
+                padding: 278px 16px 40px;
+            }
+        }
+    }
+
+    .work {
+        &__container {
+            gap: 22px;
+        }
+
+        .steps {
+            padding-left: 150px;
+
+            &::before {
+                left: 122px;
+            }
+        }
+
+        .step {
+            &::before {
+                left: -28px;
+            }
+
+            &::after {
+                left: -105px;
+            }
+
+            h3 {
+                &::before {
+                    left: -38px;
+                }
+            }
+        }
+    }
+
+    .help {
+        &__container {
+            flex-direction: column;
+        }
+
+        .content {
+            max-width: inherit;
+        }
+    }
+
+    .contact-form {
+        &__container {
+            gap: 50px;
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .areas {
+        .wrapper {
+            margin-right: -16px;
+        }
+        &__container {
+            flex-direction: column;
+            gap: 56px;
+            margin-left: -16px;
+            margin-right: -16px;
+            padding-right: 16px;
+        }
+
+        .content,
+        &__items {
+            max-width: inherit;
+        }
+
+        &__items {
+            padding-right: 16px;
+        }
+    }
+
+    .why {
+        &__container {
+            gap: 12px;
+            min-height: 500px;
+        }
+
+        .item {
+            min-height: 460px;
+            padding: 16px 16px 48px;
+
+            &__image {
+                max-width: 308px;
+            }
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            &.active {
+                min-width: 342px;
+                padding: 252px 16px 40px;
+
+                h3 {
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+
+    .work {
+        &__container {
+            flex-direction: column;
+            gap: 56px;
+        }
+
+        .content {
+            position: static;
+            top: inherit;
+            max-width: inherit;
+        }
+
+        .section-title {
+            br {
+                display: none;
+            }
+        }
+
+        .steps {
+            padding-left: 105px;
+
+            &::before {
+                left: 77px;
+            }
+        }
+
+        .step {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .help {
+        .items {
+            a {
+                &.active {
+                    min-width: 320px;
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        &__container {
+            flex-direction: column;
+            gap: 56px;
+        }
+
+        .content {
+            max-width: inherit;
+        }
+    }
+}
+
+@include breakpoint.middle-tablet {
+    .why {
+        &__top {
+            gap: 50px;
+        }
+
+        &__container {
+            gap: 16px;
+            overflow-x: auto;
+            min-height: inherit;
+            align-items: inherit;
+            margin-right: -16px;
+            padding-right: 16px;
+        }
+
+        .item {
+            min-width: 340px;
+            min-height: inherit;
+            padding: 16px;
+
+            &__image {
+                position: static;
+                min-height: 256px;
+                opacity: 1;
+                visibility: visible;
+                margin-bottom: 20px;
+            }
+
+            .icon-wrap {
+                img {
+                    filter: brightness(1);
+                }
+            }
+
+            h3 {
+                font-size: 40px;
+            }
+
+            .bottom {
+                flex-direction: row;
+                align-items: flex-end;
+                margin-top: inherit;
+            }
+
+            p {
+                font-size: 16px;
+                opacity: 1;
+                visibility: visible;
+                max-height: 100px;
+            }
+
+            .arrow-wrap {
+                display: none;
+            }
+
+            &.active {
+                min-width: 340px;
+                min-height: inherit;
+                padding: 16px;
+
+                .item {
+                    padding: 16px;
+
+                    &__image {
+                        position: static;
+                        opacity: 1;
+                        visibility: visible;
+                        margin-bottom: 20px;
+                    }
+
+                }
+
+                .icon-wrap {
+                    img {
+                        filter: brightness(1);
+                    }
+                }
+
+                h3 {
+                    font-size: 40px;
+                }
+
+                .bottom {
+                    flex-direction: row;
+                    align-items: flex-end;
+                }
+
+                p {
+                    font-size: 16px;
+                    opacity: 1;
+                    visibility: visible;
+                    max-height: 100px;
+                }
+
+                .arrow-wrap {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .faq {
+        .tricks {
+            &__question {
+                padding-left: 76px;
+            }
+            &__answer {
+                padding-inline: 76px;
+                max-width: 904px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .main-screen {
+        padding-top: 147px;
+        padding-bottom: 36px;
+        background-position-x: right -175px;
+    }
+
+    .areas {
+        padding-top: 80px;
+        padding-bottom: 40px;
+
+        &__items {
+            @include mini.flex-v-center;
+            gap: 16px;
+            overflow-x: auto;
+        }
+
+        .item {
+            min-width: 348px;
+
+            &__top {
+                gap: 2px;
+            }
+
+            h3 {
+                margin-left: 18px;
+            }
+        }
+    }
+
+    .why {
+        padding-block: 25px;
+
+        &__top {
+            margin-bottom: 56px;
+            gap: 16px;
+            flex-direction: column;
+        }
+
+        .section-title {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .work {
+        padding-block: 25px;
+    }
+
+    .help {
+        padding-block: 40px;
+
+        .items {
+            a {
+                min-width: 40px;
+
+                &.active {
+                    min-width: 220px;
+                }
+            }
+        }
+    }
+
+    .faq {
+        padding-top: 40px;
+        padding-bottom: 25px;
+
+        .section-title {
+            margin-bottom: 56px;
+        }
+
+        .tricks {
+            &__item {
+                &::before {
+                    height: 101%;
+                    border-left: 4px solid transparent;
+                }
+            }
+            &__question {
+                padding-left: 0;
+
+                &::before {
+                    content: none;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                .arrow-wrap {
+                    width: 32px;
+                    height: 32px;
+                    min-width: 32px;
+                    border-radius: 8px;
+
+                    img {
+                        height: 14px;
+                    }
+                }
+            }
+
+            &__answer {
+                padding-inline: 0;
+            }
+
+            &__item.tricks__item--active {
+                .tricks__answer {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        padding-top: 25px;
+        padding-bottom: 80px;
+
+        .form {
+            &__wrapper {
+                padding: 40px 16px;
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .work {
+        .steps {
+            padding-left: 36px;
+
+            &::before {
+                left: 8px;
+            }
+        }
+
+        .step {
+            &::after {
+                content: none;
+            }
+
+            img {
+                min-height: 203px;
+            }
+        }
+    }
+
+    .help {
+        .items {
+            a {
+                border-radius: 8px;
+
+                h3 {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                &.active {
+                    min-width: 148px;
+                    padding: 12px;
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        .form {
+            &__group-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .help {
+        .items {
+            a {
+                min-width: 20px;
+
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        .form {
+            .btn {
+                padding: 27px 20px;
+            }
+        }
+    }
 }
 
 
-@include breakpoint.mobile {
-
+@include breakpoint.small-mobile {
+    .main-screen {
+        h1 {
+            font-size: 34px;
+        }
+    }
 }

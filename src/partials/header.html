@@ -2,93 +2,127 @@
 	<div class="wrapper">
 		<div class="header__container">
             <a href="/" class="logo-link">
-				neola.systems
+				neola.<span>systems</span>
 			</a>
-            <button class="burger btn-transparent btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
-                <div class="icon">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="8" cy="24" r="6" fill="white"/>
-                        <circle cx="24" cy="24" r="6" fill="white"/>
-                        <circle cx="40" cy="24" r="6" fill="white"/>
-                    </svg>
+            <div class="header__menu-wrapper">
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">Offers</a>
+                        </li>
+                        <li>
+                            <a href="#">Areas</a>
+                        </li>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="search-btn btn-reset" type="button">
+                    <img src="../images/icon/search.svg" alt="search icon">
+                </button>
+            </div>
+            <div class="header__right">
+                <a href="#" class="btn btn--cta">
+                    Contact us
+                    <img src="../images/icon/btn-arrow-fill.svg" alt="btn arrow">
+                </a>
+                <div class="mod-languages">
+                    <p class="visually-hidden" id="language_picker_des_128">Виберіть свою мову</p>
+                    <div class="mod-languages__select btn-group">
+                        <button type="button" data-bs-toggle="dropdown" class="btn dropdown-toggle">
+                            EN
+                        </button>
+                        <ul class="lang-block dropdown-menu">
+                            <li>
+                                <a href="/bg/">
+                                    BG
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/pl/">
+                                    PL
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </button>
+                <button class="burger btn-transparent btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+                    <div class="icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="24" r="6" fill="white"/>
+                            <circle cx="24" cy="24" r="6" fill="white"/>
+                            <circle cx="40" cy="24" r="6" fill="white"/>
+                        </svg>
+                    </div>
+                </button>
+            </div>
 			<div class="mobile-menu" data-menu>
 				<div class="mobile-menu__container">
 					<div class="mobile-menu__content">
-						<div class="wrapper">
-							<div class="mobile-menu__top">
-                                <a href="/" class="logo-link">
-                                    neola.systems
-                                </a>
-                                <button class="btn-reset btn-menu-close">
-                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.22803 26.6838L26.6839 1.22792" stroke="white" stroke-opacity="0.8" stroke-linecap="round"/>
-                                        <path d="M25.9561 25.9558L0.500212 0.500002" stroke="white" stroke-opacity="0.8" stroke-linecap="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-						</div>
+                        <div class="mobile-menu__top">
+                            <a href="/" class="logo-link">
+                                neola.<span>systems</span>
+                            </a>
+                            <button class="btn-reset btn-menu-close">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="8.48438" cy="8.48601" r="6" transform="rotate(45 8.48438 8.48601)" fill="#468AFF" />
+                                <circle cx="19.7988" cy="19.7998" r="6" fill="#468AFF" />
+                                <circle cx="31.1133" cy="31.1135" r="6" transform="rotate(45 31.1133 31.1135)" fill="#468AFF" />
+                                <circle cx="8.48528" cy="31.1143" r="6" transform="rotate(-45 8.48528 31.1143)" fill="#468AFF" />
+                                <circle cx="31.1122" cy="8.48535" r="6" transform="rotate(-45 31.1122 8.48535)" fill="#468AFF" />
+                                </svg>
+                            </button>
+                        </div>
 						<nav class="nav">
 							<ul>
                                 <li>
-                                    <a href="/partnership">Partnership</a>
+                                    <a href="#">Offers</a>
                                 </li>
                                 <li>
-                                    <a href="/contacts">Contact Us</a>
+                                    <a href="#">Areas</a>
                                 </li>
                                 <li>
-                                    <a href="#whatYouCreate">What you can create</a>
+                                    <a href="#">About us</a>
                                 </li>
                                 <li>
-                                    <a href="#howItWorks">How it works</a>
+                                    <a href="#">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="#sectionValue">Value</a>
-                                </li>
-                                <li>
-                                    <a href="/about-us">About us</a>
-                                </li>
-                                <li>
-                                    <a href="#sectionReviews">Reviews</a>
-                                </li>
-                                <li>
-                                    <a href="#proofAnswers">Proof & answers</a>
-                                </li>
-                                <li>
-                                    <a href="#sectionContacts">Contacts</a>
+                                    <a href="#">Contacts</a>
                                 </li>
 							</ul>
 						</nav>
-                        <div class="wrapper">
-                            <div class="mobile-menu__bottom">
-                                <ul class="socials list-reset">
-                                    <li>
-                                        <a href="https://www.instagram.com/aivi.limited/" class="socials__link" target="_blank">
-                                            <svg class="icon">
-                                                <use href="./images/sprite.svg#instagram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.tiktok.com/@aivi.limited" class="socials__link" target="_blank">
-                                            <svg class="icon">
-                                                <use href="./images/sprite.svg#tiktok"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="socials__link" target="_blank">
-                                            <svg class="icon">
-                                                <use href="./images/sprite.svg#telegram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a class="mailto" href="mailto:info@aivi.limited">
-                                    info@aivi.limited
-                                </a>
+                        <div class="mobile-menu__bottom">
+                            <div class="mod-languages">
+                                <p class="visually-hidden" id="language_picker_des_128">Виберіть свою мову</p>
+                                <div class="mod-languages__select btn-group">
+                                    <button type="button" data-bs-toggle="dropdown" class="btn dropdown-toggle">
+                                        EN
+                                    </button>
+                                    <ul class="lang-block dropdown-menu">
+                                        <li>
+                                            <a href="/bg/">
+                                                BG
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/pl/">
+                                                PL
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+                            <button class="search-btn btn-reset" type="button">
+                                <img src="../images/icon/search.svg" alt="search icon">
+                            </button>
                         </div>
 					</div>
 				</div>

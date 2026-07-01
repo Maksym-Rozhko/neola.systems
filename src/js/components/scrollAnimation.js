@@ -32,4 +32,7 @@ const scrollAnimation = endElem => {
 //     } catch (error) {}
 // };
 
-scrollAnimation('.animation-banner .end-elem');
+scrollAnimation('.steps .step--1 + .end-elem');
+scrollAnimation('.steps .step--2 + .end-elem');
+scrollAnimation('.steps .step--3 + .end-elem');
+scrollAnimation('.steps .step--4 + .end-elem');
