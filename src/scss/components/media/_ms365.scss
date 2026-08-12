@@ -1,0 +1,224 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+
+@include breakpoint.large-desktop {
+    .page-ms365 {
+        .process {
+            .content {
+                max-width: 566px;
+            }
+        }
+
+        .plans {
+            &__container {
+                margin-right: -150px;
+                padding-right: 150px;
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-ms365 {
+        .plans {
+            &__container {
+                margin-right: -24px;
+                padding-right: 24px;
+            }
+        }
+    }
+}
+
+
+@include breakpoint.small-desktop {
+    .page-ms365 {
+        .included {
+            &__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-ms365 {
+        .solves {
+            padding-top: 80px;
+            padding-bottom: 40px;
+
+            &__wrapper {
+                margin-top: 32px;
+                padding: 16px;
+            }
+
+            &__container {
+                margin-right: -16px;
+                padding-right: 16px;
+                padding-bottom: 40px;
+            }
+        }
+
+        .included {
+            padding-block: 40px;
+
+            &__container {
+                margin-top: 48px;
+            }
+        }
+
+        .process {
+            padding-block: 40px;
+
+            &__container {
+                flex-direction: column;
+            }
+
+            .content {
+                max-width: inherit;
+            }
+        }
+
+        .plans {
+            padding-block: 40px;
+
+            &__container {
+                margin-top: 62px;
+                margin-bottom: 37px;
+            }
+        }
+
+        .faq {
+            &--extra {
+                padding-top: 40px;
+                padding-bottom: 32px;
+            }
+        }
+
+        .promotions {
+            padding-top: 32px;
+            padding-bottom: 22px;
+        }
+    }
+}
+
+@include breakpoint.middle-tablet {
+    .page-ms365 {
+        .faq {
+            &--extra {
+                .tricks {
+                    &__question {
+                        padding-left: 0;
+                    }
+
+                    &__answer {
+                        padding-inline: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-ms365 {
+        .included {
+            &__container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .plans {
+            &__knowing {
+                flex-direction: column;
+                padding: 16px;
+
+                .link {
+                    padding: 8px;
+                    min-width: inherit;
+                }
+            }
+        }
+
+        .faq {
+            &--extra {
+                padding-bottom: 40px;
+
+                .section-title {
+                    margin-bottom: 32px;
+                }
+
+                .tricks {
+                    margin-top: 32px;
+
+                    &__item {
+                        padding: 16px;
+                    }
+
+                    &__question {
+                        h3 {
+                            font-size: 24px;
+                            line-height: 120%;
+                        }
+
+                        .arrow-wrap {
+                            width: 64px;
+                            height: 64px;
+                            min-width: 64px;
+                            border-radius: 50%;
+
+                            img {
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .promotions {
+            &__top {
+                flex-direction: column;
+                padding: 16px;
+                gap: 24px;
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-ms365 {
+        .main-screen {
+            padding-top: 114px;
+            padding-bottom: 24px;
+
+            &__container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .labels {
+                order: -1;
+                margin-top: 0;
+                margin-bottom: 16px;
+            }
+
+            p {
+                margin-block: 24px;
+            }
+        }
+
+        .solves {
+            .section-title {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .promotions {
+            .btn {
+                justify-content: center;
+            }
+        }
+    }
+}

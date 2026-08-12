@@ -194,6 +194,7 @@
         border-radius: 24px;
         background-color: var(--basic-white);
         min-height: 512px;
+        position: relative;
         transition: flex .45s cubic-bezier(.22, .61, .36, 1);
 
         &__image {

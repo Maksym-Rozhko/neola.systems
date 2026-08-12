@@ -7,8 +7,10 @@
 @use "./components/header";
 @use "./components/footer";
 @use "./components/home";
+@use "./components/ms365";
 
 // подкоючение медиа
 @use "./components/media/header" as header2;
 @use "./components/media/footer" as footer2;
 @use "./components/media/home" as home2;
+@use "./components/media/ms365" as ms3652;
