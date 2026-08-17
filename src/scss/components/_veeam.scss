@@ -1,0 +1,8 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-veeam {
+    .main-screen {
+        background: linear-gradient(95.85deg, #00E874 0%, #116CC1 100%);
+    }
+}

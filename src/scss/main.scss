@@ -11,6 +11,7 @@
 @use "./components/aws";
 @use "./components/aruba";
 @use "./components/fortinet";
+@use "./components/veeam";
 
 // подкоючение медиа
 @use "./components/media/header" as header2;
