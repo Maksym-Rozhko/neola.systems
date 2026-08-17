@@ -1,0 +1,8 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-fortinet {
+    .main-screen {
+        background: linear-gradient(95.85deg, #ED3726 0%, #1A0000 100%);
+    }
+}

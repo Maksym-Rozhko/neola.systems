@@ -483,4 +483,17 @@
             }
         }
     }
+
+    .extra-text-info {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 140%;
+        text-align: center;
+        color: var(--additional-colors-blue);
+        margin-top: 64px;
+        margin-bottom: 0;
+        padding: 48px 32px;
+        border: 1px solid var(--additional-colors-blue);
+        border-radius: 32px;
+    }
 }

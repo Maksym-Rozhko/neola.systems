@@ -10,6 +10,7 @@
 @use "./components/ms365";
 @use "./components/aws";
 @use "./components/aruba";
+@use "./components/fortinet";
 
 // подкоючение медиа
 @use "./components/media/header" as header2;
@@ -17,4 +18,3 @@
 @use "./components/media/home" as home2;
 @use "./components/media/ms365" as ms3652;
 @use "./components/media/aws" as aws2;
-@use "./components/media/aruba" as aruba2;
