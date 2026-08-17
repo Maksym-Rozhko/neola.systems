@@ -1,0 +1,8 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-zerto {
+    .main-screen {
+        background: linear-gradient(95.85deg, #B42024 0%, #2F0002 100%);
+    }
+}
