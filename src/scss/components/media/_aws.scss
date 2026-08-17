@@ -67,6 +67,15 @@
                 }
             }
         }
+
+        .best-for {
+            padding-top: 104px;
+            padding-bottom: 44px;
+
+            &__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     }
 }
 
@@ -220,6 +229,32 @@
                 }
             }
         }
+
+        .best-for {
+            padding-top: 60px;
+            padding-bottom: 40px;
+
+            &__container {
+                display: none;
+            }
+
+            &-slider {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &--grid-sm {
+                padding-top: 40px;
+            }
+        }
+
+        .animation-text {
+            padding-block: 40px;
+
+            .scroll-text {
+                margin-top: 32px;
+            }
+        }
     }
 }
 
@@ -235,6 +270,10 @@
 
             &__container {
                 gap: 16px;
+            }
+
+            .company {
+                max-width: 100%;
             }
         }
 

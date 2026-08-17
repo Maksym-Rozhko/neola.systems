@@ -23,3 +23,14 @@ new Swiper('.swiper.solutions-slider', {
     prevEl: '.solutions-slider .swiper-button-prev',
   },
 });
+
+new Swiper('.swiper.best-for-slider', {
+  slidesPerView: 1.02,
+  speed: 1000,
+  spaceBetween: 16,
+
+ navigation: {
+    nextEl: '.best-for-slider .swiper-button-next',
+    prevEl: '.best-for-slider .swiper-button-prev',
+  },
+});

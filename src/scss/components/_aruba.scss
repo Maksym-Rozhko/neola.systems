@@ -1,0 +1,9 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-aruba {
+    .main-screen {
+        background: linear-gradient(95.85deg, #F5831F 0%, #FFB06B 100%);
+    }
+}
+
