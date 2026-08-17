@@ -75,13 +75,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedTextElem = document.querySelector('.animation-text .scroll-text__animated');
 
     if (animatedTextElem) {
-        const words = animatedTextElem.textContent.trim().split(/\s+/);
+        const nodes = [...animatedTextElem.childNodes];
 
-        animatedTextElem.innerHTML = words
-            .map((word, index) => {
-                return `<span data-index="${index}">${word}</span>`;
-            })
-            .join(' ');
+        let html = '';
+        let wordIndex = 0;
+
+        nodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const words = node.textContent
+                    .trim()
+                    .split(/\s+/)
+                    .filter(Boolean);
+
+                words.forEach(word => {
+                    html += `<span data-index="${wordIndex++}">${word}</span> `;
+                });
+            }
+
+            if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR') {
+                html += '<br>';
+            }
+        });
+
+        animatedTextElem.innerHTML = html;
 
         const spans = [...animatedTextElem.querySelectorAll('span')];
 
@@ -91,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const windowHeight = window.innerHeight;
 
             const start = windowHeight * 0.8;
-
             const end = windowHeight * 0.2;
 
             let progress = (start - rect.top) / (start - end);
