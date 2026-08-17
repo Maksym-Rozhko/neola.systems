@@ -71,4 +71,49 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleButton();
         });
     }
+
+    const animatedTextElem = document.querySelector('.animation-text .scroll-text__animated');
+
+    if (animatedTextElem) {
+        const words = animatedTextElem.textContent.trim().split(/\s+/);
+
+        animatedTextElem.innerHTML = words
+            .map((word, index) => {
+                return `<span data-index="${index}">${word}</span>`;
+            })
+            .join(' ');
+
+        const spans = [...animatedTextElem.querySelectorAll('span')];
+
+        function updateText() {
+            const rect = animatedTextElem.getBoundingClientRect();
+
+            const windowHeight = window.innerHeight;
+
+            const start = windowHeight * 0.8;
+
+            const end = windowHeight * 0.2;
+
+            let progress = (start - rect.top) / (start - end);
+
+            progress = Math.max(0, Math.min(1, progress));
+
+            const activeWords = Math.floor(progress * spans.length);
+
+            spans.forEach((span, index) => {
+                span.classList.toggle(
+                    'is-active',
+                    index < activeWords
+                );
+            });
+        }
+
+        window.addEventListener('scroll', updateText, {
+            passive: true
+        });
+
+        window.addEventListener('resize', updateText);
+
+        updateText();
+    }
 });
