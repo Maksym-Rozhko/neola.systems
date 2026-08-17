@@ -1,0 +1,268 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+
+@include breakpoint.large-desktop {
+    .page-aws {
+        .main-screen {
+            .banner {
+                p {
+                    max-width: 695px;
+                }
+            }
+        }
+
+        .banner {
+            .link {
+                &::after {
+                    width: 525px;
+                    height: 180px;
+                    top: 0;
+                    left: -450px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-aws {
+        .banner {
+            .link {
+                &::after {
+                    top: -30px;
+                }
+            }
+        }
+    }
+}
+
+
+@include breakpoint.small-desktop {
+    .page-aws {
+        .cases {
+            padding-block: 104px;
+
+            &__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .case {
+                min-height: 400px;
+            }
+        }
+
+        .banner {
+            &__container {
+                padding: 44px;
+            }
+
+            h2 {
+                font-size: 38px;
+            }
+
+            .link {
+                &::after {
+                    left: -400px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-aws {
+        .main-screen {
+            padding-top: 150px;
+
+            &::after {
+                height: 35%;
+            }
+
+            &__container {
+                flex-direction: column-reverse;
+            }
+
+            .labels {
+                margin-bottom: 0;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 16px;
+            }
+
+            .company {
+                margin-top: 0;
+            }
+        }
+
+        .solutions {
+            &__container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .banner {
+            &__container {
+                padding-top: 56px;
+                padding-bottom: 32px;
+                padding-inline: 20px;
+            }
+
+            img {
+                max-width: 100px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .link {
+                width: 322px;
+                height: 322px;
+                max-width: 322px;
+
+                &::after {
+                    width: 425px;
+                    height: 150px;
+                    left: -350px;
+                    top: -20px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-aws {
+        .cases {
+            padding-top: 80px;
+            padding-bottom: 40px;
+
+            &__container {
+                display: none;
+            }
+
+            &-slider {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .case {
+                min-height: 420px;
+            }
+        }
+
+
+        .solutions {
+            padding-block: 40px;
+
+            &__container {
+                grid-template-columns: 1fr;
+            }
+
+            .solution {
+                margin-inline: auto;
+            }
+        }
+
+        .banner {
+            padding-block: 40px;
+
+            &__container {
+                flex-direction: column;
+                align-items: center;
+                gap: 72px;
+            }
+
+            img {
+                display: block;
+                margin-inline: auto;
+            }
+
+            h2 {
+                text-align: center;
+                max-width: 332px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            .link {
+                &::after {
+                    background-image: url('../images/aws/banner/arrow-mob.svg');
+                    width: 45px;
+                    height: 162px;
+                    left: 50%;
+                    top: -60px;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        .how-help {
+            padding-block: 40px;
+
+            &__container {
+                margin-top: 56px;
+            }
+
+            .item {
+                align-items: flex-start;
+                flex-direction: column;
+
+                p {
+                    margin-bottom: 64px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-aws {
+        .main-screen {
+            padding-top: 104px;
+            padding-bottom: 32px;
+
+            &::after {
+                height: 45%;
+            }
+
+            &__container {
+                gap: 16px;
+            }
+        }
+
+        .solutions {
+            &__container {
+                display: none;
+            }
+
+            &-slider {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-mobile {
+    .page-aws {
+        .banner {
+            .link {
+                min-width: 260px;
+                height: 260px;
+                width: 260px;
+
+                &::after {
+                    top: -70px;
+                }
+            }
+        }
+    }
+}

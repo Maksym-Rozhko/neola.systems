@@ -1,20 +1,25 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation } from 'swiper';
+Swiper.use([Navigation]);
 
 
-new Swiper('.swiper.reviews-slider', {
-  slidesPerView: 1,
+new Swiper('.swiper.cases-slider', {
+  slidesPerView: 1.02,
   speed: 1000,
-  loop: true,
-  spaceBetween: 40,
+  spaceBetween: 16,
 
  navigation: {
-    nextEl: '.reviews-slider .swiper-button-next',
-    prevEl: '.reviews-slider .swiper-button-prev',
+    nextEl: '.cases-slider .swiper-button-next',
+    prevEl: '.cases-slider .swiper-button-prev',
   },
+});
 
-  pagination: {
-    el: '.reviews-slider .swiper-pagination',
-    clickable: true,
+new Swiper('.swiper.solutions-slider', {
+  slidesPerView: 1.02,
+  speed: 1000,
+  spaceBetween: 16,
+
+ navigation: {
+    nextEl: '.solutions-slider .swiper-button-next',
+    prevEl: '.solutions-slider .swiper-button-prev',
   },
 });

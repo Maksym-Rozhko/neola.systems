@@ -562,6 +562,7 @@
 
                     .arrow-wrap {
                         img {
+                            filter: invert(0);
                             transform: rotate(-45deg);
                         }
                     }
