@@ -128,7 +128,8 @@
             @include mini.flex-v-center;
             gap: 8px;
 
-            span {
+            span,
+            a {
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 175%;
@@ -137,6 +138,10 @@
                 padding: 8px;
                 background-color: transparent;
                 transition: all ease-in-out .4s;
+
+                &:hover {
+                    background-color: var(--additional-colors-light-green-1);
+                }
             }
         }
 
@@ -150,7 +155,8 @@
             }
 
             .item__bottom {
-                span {
+                span,
+                a {
                     background-color: var(--additional-colors-light-green-1);
                 }
             }
