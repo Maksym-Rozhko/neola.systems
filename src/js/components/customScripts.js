@@ -131,4 +131,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateText();
     }
+
+    const gridWrapItemBtns = document.querySelectorAll('.build .grid-wrap .item .show-more');
+
+    if (gridWrapItemBtns) {
+        gridWrapItemBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.classList.toggle('show');
+                btn.parentElement.parentElement.classList.toggle('open');
+            });
+        })
+    }
 });
