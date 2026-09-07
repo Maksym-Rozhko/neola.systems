@@ -2,6 +2,11 @@
 @use "../../mixins/mini";
 
 @include breakpoint.large-desktop {
+    .main-screen {
+        .content {
+            max-width: 784px;
+        }
+    }
     .accordion {
         .content {
             max-width: 553px;
@@ -230,6 +235,10 @@
             .banner {
                 border-radius: 36px;
             }
+
+            .company {
+                min-width: inherit;
+            }
         }
 
         .workplace {
@@ -237,6 +246,11 @@
                 br {
                     display: none;
                 }
+            }
+
+            .btn {
+                max-width: inherit;
+                justify-content: center;
             }
         }
 
@@ -248,8 +262,6 @@
                 .btn {
                     font-size: 18px;
                     padding-inline: 12px;
-                    max-width: inherit;
-                    justify-content: center;
                 }
 
                 &.show {
@@ -257,6 +269,11 @@
                         margin-top: 25px;
                     }
                 }
+            }
+
+            .btn {
+                max-width: inherit;
+                justify-content: center;
             }
         }
     }
