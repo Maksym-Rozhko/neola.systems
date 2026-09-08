@@ -427,10 +427,10 @@
     }
 }
 
-.page-apple {
+.page-apple,
+.page-lenovo {
     .main-screen {
         display: flex;
-        background: url('../images/apple/main-screen/desktop.jpg') no-repeat center/cover;
         padding-top: 136px;
         padding-bottom: 100px;
 
@@ -465,5 +465,17 @@
             margin-bottom: 0;
             max-width: 372px;
         }
+    }
+}
+
+.page-apple {
+    .main-screen {
+        background: url('../images/apple/main-screen/desktop.jpg') no-repeat center/cover;
+    }
+}
+
+.page-lenovo {
+    .main-screen {
+        background: url('../images/lenovo/main-screen/desktop.jpg') no-repeat center/cover;
     }
 }

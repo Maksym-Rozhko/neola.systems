@@ -105,6 +105,20 @@ a {
   display: none !important;
 }
 
+.white-logo {
+    .header {
+        .logo-link {
+            color: var(--basic-black);
+        }
+
+        &.active-scroll {
+            .logo-link {
+                color: var(--basic-white);
+            }
+        }
+    }
+}
+
 @include breakpoint.tablet {
   .main {
     overflow-x: hidden;
