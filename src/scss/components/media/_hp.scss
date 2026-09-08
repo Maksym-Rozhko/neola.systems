@@ -110,6 +110,21 @@
             }
         }
     }
+
+    .page-apple {
+        .main-screen {
+            padding-bottom: 65px;
+
+            &__container {
+                flex-direction: column;
+            }
+
+            .content {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
 }
 
 @include breakpoint.small-tablet {
@@ -287,6 +302,12 @@
             br {
                 display: none;
             }
+        }
+    }
+
+    .page-apple {
+        .main-screen {
+            background-position: center left -530px;
         }
     }
 }

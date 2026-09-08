@@ -6,7 +6,7 @@
         min-height: 100vh;
         padding-top: 261px;
         padding-bottom: 154px;
-        background: url('../images/dell/main-screen/desktop.jpg') no-repeat center/cover;
+        background: url('../images/hp/main-screen/desktop.jpg') no-repeat center/cover;
 
         &::after {
             content: none;
@@ -417,6 +417,53 @@
                 opacity: 1;
                 margin-top: 16px;
             }
+        }
+    }
+}
+
+.page-dell {
+    .main-screen {
+        background: url('../images/dell/main-screen/desktop.jpg') no-repeat center/cover;
+    }
+}
+
+.page-apple {
+    .main-screen {
+        display: flex;
+        background: url('../images/apple/main-screen/desktop.jpg') no-repeat center/cover;
+        padding-top: 136px;
+        padding-bottom: 100px;
+
+        &__container {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+        }
+
+        .content {
+            max-width: 575px;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            color: var(--basic-black);
+            font-weight: 400;
+        }
+
+        p {
+            margin-top: 24px;
+            margin-bottom: 32px;
+            color: var(--basic-black);
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 120%;
+            color: var(--additional-colors-blue);
+            margin-top: auto;
+            margin-bottom: 0;
+            max-width: 372px;
         }
     }
 }
