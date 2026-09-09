@@ -1,5 +1,6 @@
 @use "../mixins/mini";
 @use "../mixins/content";
+@use "../mixins/modal";
 
 .footer {
     padding-top: 72px;
@@ -192,5 +193,14 @@
                 }
             }
         }
+    }
+}
+
+.graph-modal {
+    background-color: var(--basic-white);
+    padding-block: 20px;
+
+    &__container {
+        @include modal.modal;
     }
 }

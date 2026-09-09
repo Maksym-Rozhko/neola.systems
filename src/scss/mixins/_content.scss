@@ -152,6 +152,102 @@
     }
 }
 
+@mixin contactForm {
+    &-group {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-grow: 1;
+        gap: 8px;
+
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            color: var(--grey-7);
+        }
+    }
+
+    &-group-wrapper {
+        @include mini.flex-v-center;
+        gap: 16px;
+        margin-block: 16px;
+    }
+
+    &__input {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        padding: 10px 16px;
+        border-radius: 4px;
+        width: 100%;
+        background-color: rgba(238, 241, 246, 0.5);
+        border: 1px solid #cbd5e4;
+        outline: none;
+        color: var(--basic-black);
+        caret-color: var(--basic-black);
+        transition: all ease-in-out .6s;
+
+        &::placeholder {
+            color: #a7b8d2;
+        }
+
+        &:focus:invalid {
+            border-color: var(--additional-colors-red);
+        }
+
+        &:disabled {
+            background-color: var(--secondary-secondary-2);
+            opacity: .5;
+        }
+    }
+
+    textarea {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        padding: 10px 16px;
+        border-radius: 4px;
+        background-color: rgba(238, 241, 246, 0.5);
+        border: 1px solid #cbd5e4;
+        resize: none;
+        min-height: 176px;
+        outline: none;
+        color: var(--basic-black);
+        caret-color: var(--basic-black);
+    }
+
+    .textarea-group {
+        @include mini.flex-all-sb;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: #a7b8d2;
+        margin-bottom: 4px;
+
+        span {
+            color: #374c6b;
+        }
+    }
+
+    .custom-checkbox {
+        @include checkbox.custom-checkbox;
+
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 32px;
+
+        div {
+            color: #2b4060;
+        }
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
 @mixin title {
     margin-top: 0;
     margin-bottom: 0;

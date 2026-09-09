@@ -14,6 +14,7 @@
 @use "./components/veeam";
 @use "./components/zerto";
 @use "./components/hp";
+@use "./components/contacts";
 
 // подкоючение медиа
 @use "./components/media/header" as header2;
@@ -22,3 +23,4 @@
 @use "./components/media/ms365" as ms3652;
 @use "./components/media/aws" as aws2;
 @use "./components/media/hp" as hp2;
+@use "./components/media/contacts" as contacts2;

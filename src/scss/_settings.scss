@@ -111,9 +111,25 @@ a {
             color: var(--basic-black);
         }
 
+        .burger {
+            .icon {
+                svg {
+                    filter: invert(1);
+                }
+            }
+        }
+
         &.active-scroll {
             .logo-link {
                 color: var(--basic-white);
+            }
+
+            .burger {
+                .icon {
+                    svg {
+                        filter: invert(0);
+                    }
+                }
             }
         }
     }

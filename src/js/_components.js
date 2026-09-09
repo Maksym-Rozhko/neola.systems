@@ -8,4 +8,4 @@ import scrollAnimation from './components/scrollAnimation';
 import accordion from './components/accordion';
 // import scrollToTop from './components/scrollToTop';
 // import smoothScrollToElems from './components/smoothScrollToElems';
-// import modal from './components/modal';
+import modal from './components/modal';
