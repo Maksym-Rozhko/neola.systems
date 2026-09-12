@@ -3,11 +3,85 @@
 
 @include('partials/head.html')
 
-<body>
+<body class="white-logo">
     @include('partials/header.html')
     <main class="main">
-        @include('partials/home.html')
+        @include('partials/contacts.html')
     </main>
     @include('partials/footer.html')
+    <div class="graph-modal">
+        <div class="graph-modal__container modal-form" role="dialog" aria-modal="true" data-graph-target="modalContactForm">
+            <div class="graph-modal__content">
+                <button class="graph-modal__close" aria-label="Закрыть модальное окно">
+                    <img src="./images/icon/cross.svg" alt="cross icon">
+                </button>
+                <div class="graph-modal__form">
+                    <h2 class="graph-modal__title">
+                        Contact us
+                    </h2>
+                    <p class="graph-modal__text">
+                        Our experts are ready to assist you and provide consultations on any issues
+                    </p>
+                    <form class="form u-form" id="uForm_3" action="#" enctype="multipart/form-data" method="POST">
+                        <div class="form__wrapper">
+                            <input class="uForm__extended" name="nospam" type="text" value="uform-empty" required="">
+                            <input class="uForm__extended" name="Текст" type="hidden" value="Contact us form from neola.systems: Let’s get in touch">
+                            <div class="uForm__error-msg" id="uForm__error-msg_3"></div>
+                            <div class="form__group-wrapper">
+                                <div class="form-group">
+                                    <input class="form__input form-control" id="name3" type="text" name="name" placeholder="Please input your name" required>
+                                    <span>
+                                        Name*
+                                    </span>
+                                </div>
+                                <div class="form-group-wrapper">
+                                    <div class="form-group">
+                                        <input class="form__input form-control" id="email3" type="email" name="email" placeholder="Please input your email" required>
+                                        <span>
+                                            Email*
+                                        </span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form__input form-control" id="tel3" type="tel" name="tel" placeholder="Please input your" required>
+                                        <span>
+                                            Phone number*
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="message3" name="message" placeholder="Your message..." maxlength="650"></textarea>
+                                    <div class="textarea-group">
+                                        <span>
+                                            Message*
+                                        </span>
+                                        0/650
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="form-checkbox custom-checkbox">
+                                <input
+                                    id="uForm__checkbox-3"
+                                    type="checkbox"
+                                    class="form__checkbox visually-hidden"
+                                    name="checkbox-3"
+                                    value="I here by authorize the use of my personal information provided in the above contact form for processing purposes, and I consent to receiving promotional and marketing communications in accordance with the Neola Privacy Policy."
+                                >
+                                <div>
+                                    I here by authorize the use of my personal information provided in the above contact form for processing purposes, and I consent to receiving promotional and marketing communications in accordance with the Neola
+                                    <a href="#">Privacy Policy.</a>
+                                </div>
+                            </label>
+                        </div>
+                        <button id="uForm__submit_3" class="btn btn--primary" type="submit" disabled>
+                            Submit
+                            <img src="../images/icon/btn-arrow.svg" alt="btn arrow">
+                            <div id="uForm__preload_3" class="uForm__preload"></div>
+                        </button>
+                    </form>
+                </div>
+                <img class="modal-form__img" src="./images/contacts/modal/desktop.jpg" alt="Contact us">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
