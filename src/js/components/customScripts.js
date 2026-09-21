@@ -142,4 +142,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
     }
+
+    const copyButton = document.querySelector('[data-share="copy"]');
+
+    if (copyButton) {
+        copyButton.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                copyButton.classList.add('is-copied');
+                setTimeout(() => {
+                    copyButton.classList.remove('is-copied');
+                }, 2000);
+            } catch (error) {
+                console.error('Unable to copy the link:', error);
+            }
+        });
+    }
 });

@@ -282,31 +282,33 @@
     color: var(--grey-5);
 }
 
-// @mixin socials {
-//     @include mini.flex-v-center;
-//     gap: 10px;
+@mixin socials {
+    @include mini.flex-v-center;
+    gap: 8px;
 
-//     &__link {
-//         @include mini.flex-all-center;
-//         width: 48px;
-//         height: 48px;
-//         border-radius: 50%;
-//         backdrop-filter: blur(33.181819915771484px);
-//         background-color: rgba(255, 255, 255, 0.1);
-//         transition: all ease-in-out .4s;
+    &__link {
+        @include mini.flex-all-center;
+        width: 32px;
+        height: 32px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
 
-//         .icon {
-//             display: block;
-//             width: 24px;
-//             height: 24px;
-//             fill: var(--basic-white);
-//         }
+        .icon {
+            display: block;
+            width: 20px;
+            height: 20px;
+            fill: var(--grey-7);
+            transition: fill ease-in-out .4s;
+        }
 
-//         &:hover {
-//             background-color: rgba(255, 255, 255, 0.3);
-//         }
-//     }
-// }
+        &:hover {
+            .icon {
+                fill: var(--primary-blue-2-hover);
+            }
+        }
+    }
+}
 
 @mixin slider-buttons {
     @include mini.flex-all-center;

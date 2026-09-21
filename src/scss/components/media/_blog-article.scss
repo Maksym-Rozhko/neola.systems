@@ -1,0 +1,137 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@include breakpoint.large-desktop {
+    .page-article {
+        .article-main {
+            &__image {
+                img {
+                    max-height: 460px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-article {
+        .article-main {
+            padding-top: 150px;
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-article {
+        .article-body {
+            &__container {
+                gap: 40px;
+            }
+
+            &__right {
+                max-width: 348px;
+
+                .read-solution {
+                    margin-bottom: 40px;
+                }
+
+                .item {
+                    h2 {
+                        font-size: 20px;
+                    }
+
+                    .image-wrap {
+                        img {
+                            max-height: 180px;
+                            min-height: 180px;
+                        }
+                    }
+                }
+
+                .subscribe {
+                    margin-top: 40px;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@include breakpoint.small-tablet {
+    .page-article {
+        .article-main {
+            padding-top: 140px;
+            padding-bottom: 60px;
+        }
+        .article-body {
+            padding-bottom: 40px;
+
+            &__right {
+                display: none;
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-article {
+        .article-main {
+            padding-top: 130px;
+            padding-bottom: 40px;
+
+            h1 {
+                margin-block: 16px;
+            }
+
+            &__info {
+                gap: 16px;
+                margin-bottom: 28px;
+            }
+
+            &__image {
+                img {
+                    border-radius: 4px;
+                    border: none;
+
+                    &.desktop {
+                        display: none;
+                    }
+
+                    &.mobile {
+                        display: block;
+                        max-height: 240px;
+                    }
+                }
+            }
+        }
+
+        .article-published {
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .article-body {
+            padding-bottom: 28px;
+
+            .second-image {
+                margin-top: 24px;
+
+                img {
+                    min-height: 240px;
+                }
+            }
+
+            .body-image {
+                margin-block: 20px;
+
+                img {
+                    min-height: 90px;
+                }
+            }
+        }
+    }
+}

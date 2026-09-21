@@ -15,6 +15,8 @@
 @use "./components/zerto";
 @use "./components/hp";
 @use "./components/contacts";
+@use "./components/blogs";
+@use "./components/blog-article";
 
 // подкоючение медиа
 @use "./components/media/header" as header2;
@@ -24,3 +26,5 @@
 @use "./components/media/aws" as aws2;
 @use "./components/media/hp" as hp2;
 @use "./components/media/contacts" as contacts2;
+@use "./components/media/blogs" as blogs2;
+@use "./components/media/blog-article" as blogArticle2;
