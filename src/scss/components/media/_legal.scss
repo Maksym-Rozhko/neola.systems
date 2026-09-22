@@ -1,0 +1,22 @@
+@use "../../mixins/breakpoint";
+
+@include breakpoint.mobile {
+    .page-legal {
+        .legal {
+            padding-top: 110px;
+            padding-bottom: 40px;
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        .legal-body {
+            padding-bottom: 40px;
+
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
+}

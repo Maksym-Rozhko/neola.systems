@@ -17,6 +17,7 @@
 @use "./components/contacts";
 @use "./components/blogs";
 @use "./components/blog-article";
+@use "./components/legal";
 
 // подкоючение медиа
 @use "./components/media/header" as header2;
@@ -28,3 +29,4 @@
 @use "./components/media/contacts" as contacts2;
 @use "./components/media/blogs" as blogs2;
 @use "./components/media/blog-article" as blogArticle2;
+@use "./components/media/legal" as legal2;
