@@ -105,36 +105,6 @@ a {
   display: none !important;
 }
 
-.white-logo {
-    .header {
-        .logo-link {
-            color: var(--basic-black);
-        }
-
-        .burger {
-            .icon {
-                svg {
-                    filter: invert(1);
-                }
-            }
-        }
-
-        &.active-scroll {
-            .logo-link {
-                color: var(--basic-white);
-            }
-
-            .burger {
-                .icon {
-                    svg {
-                        filter: invert(0);
-                    }
-                }
-            }
-        }
-    }
-}
-
 @include breakpoint.tablet {
   .main {
     overflow-x: hidden;

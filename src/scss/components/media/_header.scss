@@ -5,16 +5,17 @@
 
 @include breakpoint.middle-tablet {
     .header {
-        .logo-link {
-            font-size: 18px;
-        }
-
         &__menu-wrapper {
             padding: 4px;
             gap: 4px;
         }
 
         .nav {
+            > ul {
+                > li > ul {
+                    top: 50px;
+                }
+            }
             ul {
                 gap: 4px;
 
@@ -29,10 +30,6 @@
 
 @include breakpoint.small-tablet {
     .header {
-        .logo-link {
-            font-size: 22px;
-        }
-
         &__menu-wrapper {
             display: none;
 
@@ -49,6 +46,56 @@
                     padding: 8px;
                 }
             }
+
+            &:hover {
+                > ul {
+                    > li > ul {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+            }
+
+            > ul {
+                > li {
+                    &.parent {
+                        > a {
+                            display: flex;
+                            margin-inline: auto;
+                            max-width: fit-content;
+
+                            &.show {
+                                color: var(--primary-500);
+
+                                &::after {
+                                    transform: translateY(-50%) rotate(180deg);
+                                    filter: invert(49%) sepia(98%) saturate(3336%) hue-rotate(192deg) brightness(102%) contrast(103%);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > li > ul {
+                    &.show {
+                        position: static;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        .mobile-menu {
+            .nav {
+                > ul {
+                    > li > ul {
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
         }
 
         .burger {
@@ -59,6 +106,20 @@
 
 @include breakpoint.mobile {
     .header {
+        .logo-link {
+            img {
+                max-width: 80px;
+            }
+        }
+
+        .mobile-menu {
+            .logo-link {
+                img {
+                    max-width: inherit;
+                }
+            }
+        }
+
         &__right {
             .mod-languages {
                 display: none;
@@ -69,10 +130,6 @@
 
 @include breakpoint.small-mobile {
     .header {
-        .logo-link {
-            font-size: 16px;
-        }
-
         &__right {
             .btn {
                 &--cta {
@@ -95,10 +152,6 @@
         }
 
         .mobile-menu {
-            .logo-link {
-                font-size: 22px;
-            }
-
             &__bottom {
                 .mod-languages {
                     .dropdown-toggle {

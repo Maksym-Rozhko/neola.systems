@@ -158,4 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    const mobileMenuShowBtn = document.querySelector('.header .mobile-menu .nav li.parent a');
+
+    if (mobileMenuShowBtn) {
+        mobileMenuShowBtn.addEventListener('click', e => {
+            e.preventDefault();
+
+            mobileMenuShowBtn.classList.toggle('show');
+            mobileMenuShowBtn.nextElementSibling.classList.toggle('show');
+        });
+    }
 });

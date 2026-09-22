@@ -6,6 +6,12 @@
         &__top {
             gap: 115px;
         }
+
+        .nav {
+            > ul {
+                gap: 44px;
+            }
+        }
     }
 }
 
@@ -61,6 +67,18 @@
                 }
             }
         }
+
+        .nav {
+            > ul {
+                flex-wrap: wrap;
+
+                > li {
+                    &.parent {
+                        order: 1;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -75,9 +93,18 @@
 
         .nav {
             > ul {
-                flex-direction: column;
+                gap: 25px;
+
+                > li {
+                    &.parent {
+                        flex-wrap: wrap;
+                        gap: 20px;
+                    }
+                }
 
                 > li > ul {
+                    gap: 16px;
+
                     > li > ul {
                         > li:not(:last-child) {
                             margin-bottom: 2px;
@@ -94,7 +121,7 @@
         }
 
         &__contacts {
-            flex-direction: column;
+            grid-template-columns: 1fr;
             gap: 20px;
 
             a {

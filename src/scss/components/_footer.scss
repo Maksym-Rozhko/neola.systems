@@ -9,29 +9,32 @@
 
     &__top {
         display: flex;
-        gap: 315px;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
         padding-bottom: 48px;
     }
 
     .logo-link {
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 127%;
-        letter-spacing: -0.02em;
-        color: var(--basic-white);
+        @include mini.flex-all-center;
 
-        span {
-            font-weight: 400;
+        img {
+            filter: invert(1);
         }
     }
 
     .nav {
         > ul {
             display: flex;
-            gap: 36px;
+            gap: 88px;
             list-style: none;
             padding-left: 0;
             margin-block: 0;
+
+            > li {
+                display: flex;
+                gap: 40px;
+            }
 
             > li > a {
                 display: block;
@@ -48,6 +51,8 @@
             }
 
             > li > ul {
+                display: flex;
+                gap: 44px;
                 margin-top: 10px;
                 padding-left: 0;
                 margin-block: 0;
@@ -67,12 +72,17 @@
                     }
                 }
 
-                > li:first-child {
-                    margin-top: 8px;
-                }
-
                 > li:not(:last-child) {
                     margin-bottom: 8px;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 133%;
+                    color: #468aff;
+                    display: block;
+                    margin-bottom: 4px;
                 }
 
                 > li > ul {
@@ -89,12 +99,12 @@
                         display: block;
                         font-weight: 400;
                         font-size: 14px;
-                        line-height: 143%;
-                        color: var(--basic-white);
+                        color: var(--600);
                         transition: all ease-in-out .4s;
 
+
                         &:hover {
-                            color: var(--primary-blue-2-hover)
+                            color: var(--basic-white);
                         }
                     }
                 }
@@ -112,8 +122,9 @@
     }
 
     &__contacts {
-        display: flex;
-        gap: 83px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 135px;
 
         .item {
             display: flex;
@@ -127,12 +138,20 @@
                 color: var(--additional-colors-blue);
             }
 
+            p,
             a {
                 display: block;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 143%;
                 color: var(--basic-white);
+            }
+
+            p {
+                margin-block: 0;
+            }
+
+            a {
                 transition: all ease-in-out .4s;
 
                 &:hover {
