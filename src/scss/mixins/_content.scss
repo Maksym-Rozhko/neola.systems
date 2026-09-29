@@ -125,7 +125,7 @@
         }
 
         &:focus:invalid {
-            border-color: var(--cs-error);
+            border-color: var(--additional-colors-red);
         }
 
         &:disabled {

@@ -6,7 +6,7 @@ const scrollAnimation = endElem => {
             entries[0].isIntersecting ? elem.previousElementSibling.classList.add('animated') : elem.previousElementSibling.classList.remove('animated');
         },
         {
-            rootMargin: '100px',
+            rootMargin: '250px',
         },
     );
 

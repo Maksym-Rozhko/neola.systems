@@ -116,6 +116,12 @@
                     max-width: inherit;
                 }
             }
+
+            .search-btn {
+                img {
+                    min-width: 34px;
+                }
+            }
         }
 
         &__right {
