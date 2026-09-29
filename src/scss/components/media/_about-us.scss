@@ -1,0 +1,203 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@include breakpoint.big-desktop {
+    .page-about-us {
+        .about-us {
+            &::after {
+                width: 950px;
+                height: 950px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-about-us {
+        .about-us {
+            &::after {
+                width: 900px;
+                height: 900px;
+            }
+        }
+
+        .about-info {
+            &__container {
+                gap: 15px;
+            }
+
+            .item {
+                span {
+                    font-size: 52px;
+                }
+
+                h3 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+}
+
+@include breakpoint.tablet {
+    .page-about-us {
+        .about-us {
+            background-position: center right;
+
+            &::after {
+                width: 700px;
+                height: 800px;
+                top: -100px;
+            }
+
+            &__container {
+                gap: 80px;
+            }
+
+            .content {
+                max-width: 356px;
+            }
+        }
+
+        .about-info {
+            .item {
+                h3 {
+                    min-height: 38px;
+                }
+            }
+        }
+
+        .vendors {
+            padding-block: 80px;
+
+            .section-title {
+                margin-bottom: 32px;
+            }
+
+            &__container {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        .our-team {
+            padding-top: 40px;
+
+            .section-title {
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-about-us {
+        .about-us {
+            display: flex;
+            background-image: url('../images/about-us/main-screen/mobile.jpg');
+            background-position: center top;
+            min-height: 875px;
+            padding-top: 40px;
+            padding-bottom: 37px;
+
+            &::after {
+                width: 1585px;
+                height: 1085px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: inherit;
+                bottom: -650px;
+            }
+
+            &__container {
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 100%;
+                gap: 32px;
+            }
+
+            .content {
+                max-width: inherit;
+            }
+        }
+
+        .about-info {
+            padding-top: 80px;
+            padding-bottom: 40px;
+
+            &__container {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .item {
+                span {
+                    font-size: 72px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    min-height: inherit;
+                }
+            }
+        }
+
+        .vendors {
+            padding-top: 40px;
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-about-us {
+        .about-us {
+            &::after {
+                width: 1085px;
+                bottom: -542px;
+                transform: none;
+                left: -250px;
+            }
+        }
+
+        .vendors {
+            .section-title {
+                br {
+                    display: none;
+                }
+            }
+
+            .item {
+                flex-direction: column;
+                gap: 24px;
+
+                .images {
+                    margin-right: 0;
+                    padding-right: 0;
+                    border-right: 0;
+                }
+            }
+
+            p {
+                padding-block: 31px;
+                padding-left: 16px;
+                border-left: 1px solid var(--grey-2);
+            }
+        }
+
+        .our-team {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@include breakpoint.small-mobile {
+    .page-about-us {
+        .about-us {
+            &::after {
+                bottom: -460px;
+            }
+        }
+    }
+}

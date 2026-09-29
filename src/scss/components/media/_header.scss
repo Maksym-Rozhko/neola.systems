@@ -47,15 +47,6 @@
                 }
             }
 
-            &:hover {
-                > ul {
-                    > li > ul {
-                        opacity: 0;
-                        visibility: hidden;
-                    }
-                }
-            }
-
             > ul {
                 > li {
                     &.parent {
@@ -71,6 +62,13 @@
                                     transform: translateY(-50%) rotate(180deg);
                                     filter: invert(49%) sepia(98%) saturate(3336%) hue-rotate(192deg) brightness(102%) contrast(103%);
                                 }
+                            }
+                        }
+
+                        &:hover {
+                            > ul:not(.show) {
+                                opacity: 0;
+                                visibility: hidden;
                             }
                         }
                     }
@@ -130,6 +128,12 @@
 
 @include breakpoint.small-mobile {
     .header {
+        .logo-link {
+            img {
+                max-width: 70px;
+            }
+        }
+
         &__right {
             .btn {
                 &--cta {
@@ -145,13 +149,24 @@
         }
 
         .burger {
-            svg {
-                width: 36px;
-                height: 36px;
-            }
+            min-width: 50px;
+            height: 50px;
         }
 
         .mobile-menu {
+            &__top {
+                gap: 10px;
+
+                .btn {
+                    &--cta {
+                        padding: 8px;
+
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+            }
             &__bottom {
                 .mod-languages {
                     .dropdown-toggle {
