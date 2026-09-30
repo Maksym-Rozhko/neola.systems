@@ -86,10 +86,94 @@
 
         .mobile-menu {
             .nav {
+                width: 100%;
+
                 > ul {
+                    align-items: flex-start;
+
+                    > li {
+                        width: 100%;
+
+                        &.parent {
+                            a {
+                                max-width: inherit;
+
+                                &::after {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+                        }
+                    }
+
                     > li > ul {
-                        a {
+                        display: flex;
+                        z-index: -1;
+
+                        span {
+                            font-weight: 500;
                             font-size: 20px;
+                            line-height: 140%;
+                            color: var(--grey-6);
+                            padding-right: 26px;
+                            position: relative;
+                            margin-bottom: 8px;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 20px;
+                                height: 20px;
+                                right: 6px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                background-image: url(../images/icon/arrow.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                                transition: all ease-in-out 0.4s;
+                            }
+                        }
+
+                        a {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 140%;
+                            text-align: center;
+                            color: var(--500);
+                            padding: 0;
+                        }
+
+                        > li {
+                            &.parent {
+                                ul {
+                                    li {
+                                        &:not(:last-child) {
+                                            margin-bottom: 8px;
+                                        }
+                                    }
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    max-height: 0;
+                                    transition: all ease-in-out 0.4s;
+                                }
+
+                                &.show {
+                                    z-index: 1;
+
+                                    span {
+                                        &::after {
+                                            transform: translateY(-50%) rotate(180deg);
+                                        }
+                                    }
+
+                                    ul {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        max-height: 400px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -160,6 +244,14 @@
         }
 
         .mobile-menu {
+            &__content {
+                overflow-y: auto;
+            }
+
+            .nav {
+                margin-top: 30px;
+            }
+
             &__top {
                 gap: 10px;
 
@@ -174,6 +266,8 @@
                 }
             }
             &__bottom {
+                margin-top: 30px;
+
                 .mod-languages {
                     .dropdown-toggle {
                         min-width: 61px;
