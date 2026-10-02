@@ -23,6 +23,7 @@
         padding: 12px 16px;
         border-radius: 20px;
         background-color: var(--basic-white);
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
     }
 
     .burger {
@@ -48,6 +49,7 @@
         border-radius: 20px;
         padding: 8px;
         background-color: var(--basic-white);
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
         position: relative;
     }
 
@@ -186,7 +188,8 @@
                 padding-left: 52px;
                 font-size: 15px;
                 min-height: 50px;
-                background-color: var(--100);
+                box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+                background-color: var(--basic-white);
                 transition: all ease-in-out .4s;
 
                 &::before,
@@ -234,7 +237,8 @@
                 padding-left: 0;
                 border-radius: 16px;
                 margin-block: 0;
-                background-color: var(--100);
+                background-color: var(--basic-white);
+                box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
                 margin-top: 0;
                 margin-inline: 1px;
                 padding-inline: 12px;
@@ -296,11 +300,6 @@
             @include mini.flex-all-sb;
             gap: 20px;
             width: 100%;
-
-            .logo-link {
-                box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
-                color: var(--additional-colors-blue);
-            }
         }
 
         .nav {

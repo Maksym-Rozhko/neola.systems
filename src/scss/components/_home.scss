@@ -436,7 +436,6 @@
         img {
             max-width: 572px;
             border-radius: 32px;
-            max-height: 0;
             opacity: 0;
             transition: all ease-in-out .6s;
         }
@@ -462,7 +461,6 @@
             }
 
             img {
-                max-height: 100%;
                 opacity: 1;
             }
         }

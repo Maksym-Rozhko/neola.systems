@@ -59,10 +59,11 @@
             .privacy-links {
                 ul {
                     flex-direction: column;
+                    align-items: flex-start;
                     gap: 20px;
 
                     a {
-                        padding-inline: 17px;
+                        padding-inline: 0;
                     }
                 }
             }
