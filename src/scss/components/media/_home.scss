@@ -182,7 +182,7 @@
 
     .help {
         .items {
-            a {
+            .item {
                 &.active {
                     min-width: 320px;
                 }
@@ -370,7 +370,7 @@
         padding-block: 40px;
 
         .items {
-            a {
+            .item {
                 min-width: 40px;
 
                 &.active {
@@ -466,7 +466,7 @@
 
     .help {
         .items {
-            a {
+            .item {
                 border-radius: 8px;
 
                 h3 {
@@ -494,7 +494,7 @@
 @media (max-width: 400px) {
     .help {
         .items {
-            a {
+            .item {
                 min-width: 20px;
 
                 h3 {

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const helpContainer = document.querySelector('.help .help__container');
 
     if (helpContainer) {
-        const items = helpContainer.querySelectorAll('.items a');
+        const items = helpContainer.querySelectorAll('.items .item');
         const defaultItem = items[0];
 
         const setActive = (item) => {

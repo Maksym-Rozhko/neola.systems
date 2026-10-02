@@ -20,7 +20,6 @@
 
         span {
             font-weight: 500;
-            color: var(--additional-colors-blue);
         }
     }
 
@@ -491,7 +490,7 @@
         display: flex;
         gap: 6px;
 
-        a {
+        .item {
             @include mini.flex-all-center;
             flex-direction: column;
             gap: 16px;
@@ -543,7 +542,7 @@
         }
 
         @for $i from 1 through 20 {
-            a:nth-child(#{$i}) {
+            .item:nth-child(#{$i}) {
                 &::before {
                     opacity: max(0, 1 - ($i - 1) * 0.1);
                 }
