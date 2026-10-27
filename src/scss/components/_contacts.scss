@@ -143,14 +143,18 @@
         &__container {
             display: flex;
             justify-content: space-between;
-            gap: 140px;
+            gap: 40px;
             padding-bottom: 120px;
             border-bottom: 1px solid var(--grey-2);
         }
 
+        .content {
+            flex-shrink: 0;
+        }
+
         .details {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
             flex-grow: 1;
 
@@ -181,6 +185,10 @@
                     &:hover {
                         color: var(--additional-colors-blue);
                     }
+                }
+
+                &:last-child {
+                    grid-column: 1 / 4;
                 }
             }
         }

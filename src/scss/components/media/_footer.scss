@@ -71,11 +71,16 @@
 
         .nav {
             > ul {
-                flex-wrap: wrap;
+                flex-direction: column;
 
                 > li {
                     &.parent {
-                        order: 1;
+                        flex-direction: column;
+
+                        ul {
+                            flex-direction: column;
+                            gap: 0;
+                        }
                     }
                 }
             }
@@ -92,23 +97,33 @@
             flex-direction: column;
         }
 
+
+        &__bottom {
+            .copyright {
+                color: var(--basic-white);
+            }
+
+            .privacy-links {
+                a {
+                    color: var(--basic-white);
+                }
+            }
+        }
+
         .nav {
             > ul {
-                gap: 25px;
+                gap: 36px;
 
                 > li {
                     &.parent {
-                        flex-wrap: wrap;
-                        gap: 20px;
+                        gap: 10px;
                     }
                 }
 
                 > li > ul {
-                    gap: 16px;
-
                     > li > ul {
                         > li:not(:last-child) {
-                            margin-bottom: 2px;
+                            margin-bottom: 4px;
                         }
                     }
                 }
